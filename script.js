@@ -1,0 +1,21 @@
+// =========================================
+// FAITH SUNDAY MOSES — PORTFOLIO
+// Mobile Navigation
+// =========================================
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("mobile-active");
+    menuToggle.classList.toggle("active");
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("mobile-active");
+      menuToggle.classList.remove("active");
+    });
+  });
+}
